@@ -1,4 +1,13 @@
-@import "_mixins/font-face";
+@font-face {
+  font-family: "PT Sans Narrow", sans-serif;
+  src: url("../fonts/PT_Sans_Narrow/PT_Sans-Narrow-Web-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
-+font-face("roboto-example", "../fonts/RobotoRegular/RobotoRegular")
-+font-face("roboto-example", "../fonts/RobotoBold/RobotoBold", bold)
+@font-face {
+  font-family: "PT Sans Narrow", sans-serif;
+  src: url("../fonts/PT_Sans_Narrow/PT_Sans-Narrow-Web-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}

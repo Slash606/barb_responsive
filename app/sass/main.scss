@@ -1,4 +1,11 @@
+@import "normalize";
 @import "fonts";
 @import "libs";
 @import "vars";
+
+body {
+  font-family: $default-font;
+  font-size: 14px;
+  background-color: green;
+}
 
