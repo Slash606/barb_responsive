@@ -1,6 +1,7 @@
 $default-font: "PT Sans Narrow", sans-serif;
 $dark-grey: #292929;
 $light-grey: #f8f5f2;
-$tablet: #{"(min-width: 768px)"};
-$desc: #{"(min-width: 1200px)"};
+$mobile: 320px;
+$tablet: 768px;
+$desc: 1200px;
 
