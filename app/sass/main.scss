@@ -5,7 +5,7 @@
 @import "scaffolding";
 @import "mixins";
 
-.wrapper {
+.container {
   width: 320px;
   margin: 0 auto;
   /*background-color: red;
@@ -18,7 +18,7 @@
   }
 }
 
-.wrapper-fluid {
+.container-fluid {
   width: auto;
   /*min-height: 350px;
   background-color: yellow;*/
@@ -28,4 +28,41 @@
     margin: 0 auto;
   }
 }
+
+.pageHeader {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  color: white;
+}
+
+.mainNav {
+  background-color: red;
+  min-height: 60px;
+  order: 2;
+  /*@include mq($tablet) {
+    order: 1;
+  }*/
+}
+
+.pageLogo {
+  background-color: blue;
+  min-height: 300px;
+  @include mq($tablet) {
+    order: 2;
+  }
+}
+
+.mainNav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.mainNav__item{
+
+}
+
+
 
