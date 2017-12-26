@@ -5,18 +5,6 @@
 @import "scaffolding";
 @import "mixins";
 
-/*.container {
-  width: 320px;
-  margin: 0 auto;
-  !*background-color: red;
-  min-height: 300px;*!
-  @include mq($tablet) {
-    width: 640px;
-  }
-  @include mq($desc) {
-    width: 960px;
-  }
-}*/
 
 .container {
   width: auto;
@@ -37,16 +25,33 @@
 }
 
 .pageLogo {
-  background-color: red;
-  min-height: 60px;
+  background-color: $dark-grey;
+  min-height: 85px;
   @include mq($tablet) {
     order: 2;
+    background: url("../img/back-desktop.jpg") center top no-repeat;
+    min-height: 400px;
+  }
+  @include mq($desc) {
+    min-height: 648px;
+  }
+}
+
+.pageLogo img {
+  display: block;
+  margin: 29px auto 0;
+  @include mq($tablet) {
+    margin-top: 90px;
   }
 }
 
 .mainNav {
-  background-color: blue;
-  min-height: 300px;
+  background-color: $brown-light;
+  min-height: 50px;
+  @include mq($tablet) {
+    min-height: 70px;
+    background-color: #000000;
+  }
 
 }
 
