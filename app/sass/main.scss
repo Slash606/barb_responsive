@@ -27,6 +27,7 @@
 .pageLogo {
   background-color: $dark-grey;
   min-height: 85px;
+  text-align: center;
   @include mq($tablet) {
     order: 2;
     background: url("../img/back-desktop.jpg") center top no-repeat;
@@ -38,8 +39,8 @@
 }
 
 .pageLogo img {
-  display: block;
-  margin: 29px auto 0;
+  /*display: block;*/
+  margin-top: 29px;
   @include mq($tablet) {
     margin-top: 90px;
   }
@@ -48,12 +49,67 @@
 .mainNav {
   background-color: $brown-light;
   min-height: 50px;
+  display: flex;
+  justify-content: space-between;
   @include mq($tablet) {
     min-height: 70px;
     background-color: #000000;
   }
-
 }
+
+.mainNav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  @include mq($tablet) {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    max-width: 750px;
+  }
+  li {
+    /*flex-grow: 1;*/
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 50px;
+    width: 100%;
+    @include mq($tablet) {
+      line-height: 70px;
+    }
+  }
+}
+
+.mainNav__item {
+  display: none;
+  @include mq($tablet) {
+    display: block;
+  }
+  &--active {
+    display: block;
+    text-align: center;
+  }
+}
+
+.mainNav__login li {
+  display: none;
+  @include mq($tablet) {
+    display: block;
+    flex-shrink: 1;
+    max-width: 110px;
+  }
+}
+
+
+
+
+
 
 
 
