@@ -81,6 +81,8 @@
   background: $dark-grey url("../img/back-desktop.jpg") center top no-repeat;
   min-height: 648px;
   text-align: center;
+  position: relative;
+  z-index: 10;
   @include mq($tablet) {
     min-height: 400px;
   }
@@ -95,6 +97,23 @@
   @include mq($mobile) {
     margin-top: 29px;
   }
+}
+
+
+.stats {
+  width: 960px;
+  height: 320px;
+  background-color: rgba(255, 0, 0, 0.9);
+  /*margin-top: -160px;
+  z-index: 1;
+  position: relative;*/
+}
+
+.stats__header {
+  background-color: #fff;
+  margin-top: -160px;
+  z-index: 1;
+  position: relative;
 }
 
 
