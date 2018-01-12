@@ -74,6 +74,9 @@
     line-height: 70px;
     display: block;
     text-align: center;
+    /*&:hover {
+      background-color: lighten(black, 6);
+    }*/
   }
 }
 
@@ -82,7 +85,6 @@
   min-height: 648px;
   text-align: center;
   position: relative;
-  z-index: 10;
   @include mq($tablet) {
     min-height: 400px;
   }
@@ -101,19 +103,47 @@
 
 
 .stats {
-  width: 960px;
+  position: relative;
   height: 320px;
-  background-color: rgba(255, 0, 0, 0.9);
-  /*margin-top: -160px;
+  display: flex;
+  flex-wrap: wrap;
   z-index: 1;
-  position: relative;*/
+  margin-top: -160px;
+  @include mq($mobile){
+    margin-top: 0;
+  }
+  /*align-content: stretch;*/
 }
 
 .stats__header {
+  min-height: 160px;
+  width: 33.333333%;
+  background-color: rgba(255, 0, 0, 0.9);
+
+  @include mq($tablet) {
+    width: 100%;
+  }
+}
+
+.stats__data {
   background-color: #fff;
-  margin-top: -160px;
-  z-index: 1;
-  position: relative;
+  min-height: 320px;
+  width: 66.66666%;
+  display: flex;
+  flex-wrap: wrap;
+  @include mq($tablet) {
+    width: 100%;
+  }
+}
+
+.stats__tile {
+  color: black;
+  font-size: 40px;
+  width: 50%;
+  min-height: 160px;
+  @include mq($mobile) {
+    width: 100%;
+  }
 }
 
 
