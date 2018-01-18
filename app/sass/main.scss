@@ -166,18 +166,49 @@
   margin: 0;
   padding: 0;
   display: flex;
+  @include mq($tablet) {
+    margin-top: 160px;
+    flex-direction: column;
+  }
+  @include mq($mobile) {
+    margin-top: 480px;
+  }
 
 }
 
 .advantages__item {
   display: block;
-  min-height: 400px;
+  box-sizing: border-box;
+ /* min-height: 400px;*/
+  padding-top: 208px;
   text-decoration: none;
-  flex-grow: 1;
+  /*flex-grow: 1;*/
   width: calc(100% / 3);
   text-align: center;
+  @include mq($tablet, $mobile) {
+    width: 100%;
+    flex-wrap: wrap;
+    padding-top: 20px;
+    padding-left: 160px;
+  }
+  @include mq($mobile) {
+    display: none;
+    &--active {
+      display: block;
+      width: 100%;
+    }
+  }
 }
 
+.news {
+  min-height: 750px;
+  background-color: #fff;
+}
+
+
+.mainFooter {
+  min-height: 200px;
+}
 
 
 
