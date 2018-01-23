@@ -177,6 +177,7 @@
     width: 100%;
     flex-direction: row;
     min-height: 78px;
+    padding: 20px;
   }
   &:nth-child(2), &:nth-child(3) {
      background-color: lighten($dark-grey, 2);
@@ -200,6 +201,10 @@
   line-height: 72px;
   font-weight: bold;
   color: #ffffff;
+  @include mq($mobile) {
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 
 .stats__descr {
@@ -208,10 +213,15 @@
   font-size: 20px;
   line-height: 27px;
   font-weight: normal;
+  margin-top: auto;
   @include mq($mobile) {
     width: 120px;
+    font-size: 18px;
+    line-height: 18px;
     text-align: right;
+    margin-top: 0;
     margin-left: auto;
+    /*margin-top: 10px;*/
   }
 }
 
