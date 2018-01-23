@@ -161,6 +161,10 @@
 }
 
 .stats__tile {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 36px;
   color: black;
   font-size: 40px;
   width: 50%;
@@ -183,6 +187,21 @@
       background-color: $dark-grey;
     }
   }
+}
+
+.stats__price {
+  font-family: $default-font;
+  font-size: 72px;
+  line-height: 72px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.stats__descr {
+  font-family: $default-font;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 27px;
 }
 
 .advantages__list {
