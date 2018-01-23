@@ -112,6 +112,9 @@
   @include mq($mobile){
     margin-top: 0;
   }
+  @include  mq($tablet, $mobile) {
+    margin-top: -190px;
+  }
   /*align-content: stretch;*/
 }
 
@@ -164,7 +167,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  padding: 30px 36px;
+  padding: 28px 30px;
   color: black;
   font-size: 40px;
   width: 50%;
@@ -172,6 +175,8 @@
   background-color: $dark-grey;
   @include mq($mobile) {
     width: 100%;
+    flex-direction: row;
+    min-height: 78px;
   }
   &:nth-child(2), &:nth-child(3) {
      background-color: lighten($dark-grey, 2);
@@ -202,6 +207,12 @@
   color: #ffffff;
   font-size: 20px;
   line-height: 27px;
+  font-weight: normal;
+  @include mq($mobile) {
+    width: 120px;
+    text-align: right;
+    margin-left: auto;
+  }
 }
 
 .advantages__list {
@@ -228,6 +239,12 @@
   /*flex-grow: 1;*/
   width: calc(100% / 3);
   text-align: center;
+  & h2{
+    font-size: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
   @include mq($tablet, $mobile) {
     width: 100%;
     flex-wrap: wrap;
